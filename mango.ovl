@@ -1,0 +1,385 @@
+[Master]
+Implementation=2
+FontFace=Unispace
+FontHeight=-9
+FontWeight=400
+ZoomRatio=2
+[Settings]
+Name=
+RefreshPeriod=1000
+EmbeddedImage=
+PingAddr=
+[General]
+Sources=19
+Tables=1
+Layers=20
+[Source0]
+Name=CPU temperature
+Units=°C
+Format=
+Formula=
+Provider=HAL
+ID=CPU temperature
+[Source1]
+Name=CPU power
+Units=W
+Format=
+Formula=
+Provider=HAL
+ID=CPU power
+[Source2]
+Name=CPU temperature
+Units=°C
+Format=
+Formula=
+Provider=MSI Afterburner
+SrcId=00000080
+Gpu=FFFFFFFF
+SrcName=
+[Source3]
+Name=CPU power
+Units=W
+Format=
+Formula=
+Provider=MSI Afterburner
+SrcId=00000100
+Gpu=FFFFFFFF
+SrcName=
+[Source4]
+Name=CPU temperature
+Units=°C
+Format=
+Formula=
+Provider=AIDA
+ID=TCPUPKG,TCPU
+[Source5]
+Name=CPU power
+Units=W
+Format=
+Formula=
+Provider=AIDA
+ID=PCPUPKG
+[Source6]
+Name=CPU temperature
+Units=°C
+Format=
+Formula=
+Provider=HwInfo
+SensorInst=0
+ReadingType=1
+ReadingName=CPU Package,CPU (Tctl/Tdie)
+[Source7]
+Name=CPU power
+Units=W
+Format=
+Formula=
+Provider=HwInfo
+SensorInst=0
+ReadingType=5
+ReadingName=CPU Package Power,CPU Package Power (SMU)
+[Source8]
+Name=CPU usage
+Units=%
+Format=
+Formula=
+Provider=HAL
+ID=CPU usage
+[Source9]
+Name=RAM usage
+Units=GB
+Format=%.1f
+Formula=x / 1024
+Provider=HAL
+ID=RAM usage
+[Source10]
+Name=RAM usage percent
+Units=%
+Format=
+Formula=
+Provider=HAL
+ID=RAM usage percent
+[Source11]
+Name=RAM usage \ process
+Units=GB
+Format=%.1f
+Formula=x / 1024
+Provider=HAL
+ID=RAM usage \ process
+[Source12]
+Name=GPU1 temperature
+Units=°C
+Format=
+Formula=
+Provider=HAL
+ID=GPU1 temperature
+[Source13]
+Name=GPU1 memory temperature
+Units=°C
+Format=
+Formula=
+Provider=HAL
+ID=GPU1 memory temperature
+[Source14]
+Name=GPU1 usage
+Units=%
+Format=
+Formula=
+Provider=HAL
+ID=GPU1 usage
+[Source15]
+Name=GPU1 power
+Units=W
+Format=
+Formula=
+Provider=HAL
+ID=GPU1 power
+[Source16]
+Name=GPU1 memory usage
+Units=GB
+Format=%.1f
+Formula=x / 1024
+Provider=HAL
+ID=GPU1 memory usage
+[Source17]
+Name=GPU1 memory usage percent
+Units=%
+Format=
+Formula=
+Provider=HAL
+ID=GPU1 memory usage percent
+[Source18]
+Name=GPU1 memory usage \ process
+Units=GB
+Format=%.1f
+Formula=x / 1024
+Provider=HAL
+ID=GPU1 memory usage \ process
+[Table0]
+Name=SensorsTable
+ValueAlignment=-3
+UnitsAlignment=3
+Lines=4
+Line0Name=%CPUShort%
+Line0Color=8080
+Line0Cells=3
+Line0Cell0Source=CPU usage
+Line0Cell0Color=FFFF00,75,95,FF0000,95,(CPU usage,1)
+Line0Cell1Source=CPU temperature
+Line0Cell2Source=CPU power
+Line1Name=%GPU%
+Line1Color=8000
+Line1Cells=3
+Line1Cell0Source=GPU1 usage
+Line1Cell0Color=FFFF00,75,95,FF0000,95,(GPU1 usage,1)
+Line1Cell1Source=GPU1 temperature
+Line1Cell2Source=GPU1 power
+Line2Name=%VRAM% VRAM
+Line2Color=8000
+Line2Cells=4
+Line2Cell0Source=GPU1 memory usage percent
+Line2Cell0Color=FFFF00,75,95,FF0000,95,(GPU1 memory usage percent,1)
+Line2Cell1Source=GPU1 memory temperature
+Line2Cell2Source=GPU1 memory usage
+Line2Cell3Source=GPU1 memory usage \ process
+Line2Cell3Color=FF8080
+Line3Name=%RAM% RAM
+Line3Color=8080C0
+Line3Cells=4
+Line3Cell0Source=RAM usage percent
+Line3Cell0Color=FFFF00,75,95,FF0000,95,(RAM usage percent,1)
+Line3Cell1Text=
+Line3Cell2Source=RAM usage
+Line3Cell3Source=RAM usage \ process
+Line3Cell3Color=FF8080
+[Layer0]
+Name=
+Text=
+PositionX=-2
+PositionY=-1
+ExtentX=-44
+ExtentY=-19
+ExtentOrigin=0
+BgndColor=80000000
+[Layer1]
+Name=Frametime graph
+Text=<G=Frametime,0,0,1,0,100,0>
+PositionX=-4
+PositionY=-14
+ExtentX=-31
+ExtentY=-4
+ExtentOrigin=0
+TextColor=FF00
+[Layer2]
+Name=Process
+Text=<APP>
+PositionX=-4
+PositionY=-10
+ExtentX=-15
+ExtentY=-2
+ExtentOrigin=0
+Size=200
+TextColor=FF8080
+[Layer3]
+Name=Frametime
+Text=<FT> ms
+PositionX=-35
+PositionY=-14
+ExtentX=-11
+ExtentY=-1
+ExtentOrigin=0
+TextColor=FFFFFF
+[Layer4]
+Name=FPS
+Text=<FR>
+PositionX=-19
+PositionY=-10
+ExtentX=-12
+ExtentY=-2
+ExtentOrigin=2
+Size=200
+TextColor=FFFFFF
+[Layer5]
+Name=FPS
+Text=FPS
+PositionX=-31
+PositionY=-10
+ExtentX=0
+ExtentY=0
+ExtentOrigin=0
+TextColor=FFFFFF
+[Layer6]
+Name=Process
+Text=RAM
+PositionX=-4
+PositionY=-8
+ExtentX=-15
+ExtentY=-2
+ExtentOrigin=0
+Size=200
+TextColor=FF80C0
+[Layer7]
+Name="vram "
+Text=VRAM
+PositionX=-4
+PositionY=-6
+ExtentX=-15
+ExtentY=-2
+ExtentOrigin=0
+Size=200
+TextColor=C080C0
+[Layer8]
+Name=Process
+Text=CPU
+PositionX=-4
+PositionY=-4
+ExtentX=-15
+ExtentY=-2
+ExtentOrigin=0
+Size=200
+TextColor=80C0
+[Layer9]
+Name=Process
+Text=GPU
+PositionX=-4
+PositionY=-2
+ExtentX=-15
+ExtentY=-2
+ExtentOrigin=0
+Size=200
+TextColor=40C040
+[Layer10]
+Name=Process
+Text=Frametime
+PositionX=-4
+PositionY=-13
+ExtentX=-16
+ExtentY=-1
+ExtentOrigin=0
+TextColor=FF8080
+[Layer11]
+Name=FPS
+Text=%RAM usage%
+PositionX=-19
+PositionY=-8
+ExtentX=-12
+ExtentY=-2
+ExtentOrigin=2
+Size=200
+TextColor=FFFFFF
+[Layer12]
+Name=FPS
+Text=%GPU1 memory usage%
+PositionX=-19
+PositionY=-6
+ExtentX=-12
+ExtentY=-2
+ExtentOrigin=2
+Size=200
+TextColor=FFFFFF
+[Layer13]
+Name=FPS
+Text=%CPU usage%%
+PositionX=-19
+PositionY=-4
+ExtentX=-12
+ExtentY=-2
+ExtentOrigin=2
+Size=200
+TextColor=FFFFFF
+[Layer14]
+Name=FPS
+Text=%GPU1 usage%%
+PositionX=-19
+PositionY=-2
+ExtentX=-12
+ExtentY=-2
+ExtentOrigin=2
+Size=200
+TextColor=FFFFFF
+[Layer15]
+Name=FPS
+Text=GB
+PositionX=-31
+PositionY=-8
+ExtentX=0
+ExtentY=0
+ExtentOrigin=0
+TextColor=FFFFFF
+[Layer16]
+Name=FPS
+Text=GB
+PositionX=-31
+PositionY=-6
+ExtentX=0
+ExtentY=0
+ExtentOrigin=0
+TextColor=FFFFFF
+[Layer17]
+Name=FPS
+Text=%GPU1 temperature%°C
+PositionX=-31
+PositionY=-2
+ExtentX=-13
+ExtentY=-2
+ExtentOrigin=2
+Size=200
+TextColor=FFFFFF
+[Layer18]
+Name=FPS
+Text=%CPU temperature%°C
+PositionX=-31
+PositionY=-4
+ExtentX=-13
+ExtentY=-2
+ExtentOrigin=2
+Size=200
+TextColor=FFFFFF
+[Layer19]
+Name=Process
+Text=Resolution <RES>
+PositionX=-4
+PositionY=-18
+ExtentX=-16
+ExtentY=-1
+ExtentOrigin=0
+TextColor=FF8080
