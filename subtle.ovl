@@ -1,0 +1,176 @@
+[Master]
+Implementation=2
+FontFace=Unispace
+FontHeight=-9
+FontWeight=400
+ZoomRatio=3
+[Settings]
+Name=
+RefreshPeriod=1000
+EmbeddedImage=
+PingAddr=
+[General]
+Sources=15
+Tables=1
+Layers=4
+[Source0]
+Name=CPU temperature
+Units=°C
+Format=
+Formula=
+Provider=HAL
+ID=CPU temperature
+[Source1]
+Name=CPU clock
+Units=MHz
+Format=
+Formula=
+Provider=HAL
+ID=CPU clock
+[Source2]
+Name=CPU power
+Units=W
+Format=
+Formula=
+Provider=HAL
+ID=CPU power
+[Source3]
+Name=CPU usage
+Units=%
+Format=
+Formula=
+Provider=HAL
+ID=CPU usage
+[Source4]
+Name=CPU usage max
+Units=%
+Format=
+Formula=
+Provider=HAL
+ID=CPU usage max
+[Source5]
+Name=RAM usage
+Units=GB
+Format=%.1f
+Formula=x/1024
+Provider=HAL
+ID=RAM usage
+[Source6]
+Name=RAM usage percent
+Units=%
+Format=
+Formula=
+Provider=HAL
+ID=RAM usage percent
+[Source7]
+Name=GPU1 temperature
+Units=°C
+Format=
+Formula=
+Provider=HAL
+ID=GPU1 temperature
+[Source8]
+Name=GPU1 clock
+Units=MHz
+Format=
+Formula=
+Provider=HAL
+ID=GPU1 clock
+[Source9]
+Name=GPU1 power
+Units=W
+Format=
+Formula=
+Provider=HAL
+ID=GPU1 power
+[Source10]
+Name=GPU1 usage
+Units=%
+Format=
+Formula=
+Provider=HAL
+ID=GPU1 usage
+[Source11]
+Name=GPU1 memory usage
+Units=GB
+Format=%.1f
+Formula=x/1024
+Provider=HAL
+ID=GPU1 memory usage
+[Source12]
+Name=GPU1 memory usage percent
+Units=%
+Format=
+Formula=
+Provider=HAL
+ID=GPU1 memory usage percent
+[Source13]
+Name=Total RAM
+Units=GB
+Format=
+Formula=x/1024
+Provider=HAL
+ID=Total RAM
+[Source14]
+Name=GPU1 total memory
+Units=GB
+Format=
+Formula=x/1024
+Provider=HAL
+ID=GPU1 total memory
+[Table0]
+Name=SampleTable
+ValueSize=50
+Lines=2
+Line0Name=HDD1
+Line0Cells=3
+Line0Cell0Source=HDD1 usage
+Line0Cell1Source=HDD1 read rate
+Line0Cell2Source=HDD1 write rate
+Line1Name=NET1
+Line1Cells=3
+Line1Cell0Text=
+Line1Cell1Source=NET1 download rate
+Line1Cell2Source=NET1 upload rate
+[Layer0]
+Name=Framerate
+Text=<FR>
+PositionX=-1
+PositionY=-1
+ExtentX=-4
+ExtentY=-1
+ExtentOrigin=2
+FixedAlignment=1
+TextColor=4EB2B2B2
+[Layer1]
+Name=Framerate units
+Text=" FPS"
+PositionX=-5
+PositionY=-1
+ExtentX=-3
+ExtentY=-1
+ExtentOrigin=3
+FixedAlignment=1
+Size=50
+TextColor=4EB2B2B2
+[Layer2]
+Name=GPU usage
+Text=%GPU1 usage%
+PositionX=-1
+PositionY=-2
+ExtentX=-4
+ExtentY=-1
+ExtentOrigin=2
+FixedAlignment=1
+TextColor=4EB2B2B2
+[Layer3]
+Name=GPU usage units
+Text=" %"
+PositionX=-5
+PositionY=-2
+ExtentX=-2
+ExtentY=-1
+ExtentOrigin=3
+FixedAlignment=1
+Size=50
+TextColor=4EB2B2B2
